@@ -2,7 +2,7 @@
 (function () {
 	
 	// get all element with 'data-fade' attribute
-	function getFadeElement() {
+	function getFadeElements() {
 		
 		var fadeElements = $("[data-fade=active]");
 		var elements = [];
@@ -44,13 +44,13 @@
 	
 	$(document).ready(function() {
 		
-		var elements = getFadeElement();
+		var elements = getFadeElements();
 		var arrayLength = elements.length;
 		
 		initFadeElements(elements);
 		
 		$(window).resize(function() {
-			elements = getFadeElement();
+			elements = getFadeElements();
 			arrayLength = elements.length;
 			initFadeElements(elements);
 		});
